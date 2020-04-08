@@ -16,7 +16,7 @@ namespace DatabaseCon
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Assignment6());
+            Application.Run(new Question2());
         }
     }
 }
