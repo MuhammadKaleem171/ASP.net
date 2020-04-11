@@ -13,6 +13,8 @@ namespace DatabaseCon
 {
     public partial class Form1 : Form
     {
+        public static  string  [] dateofbirth;
+         public  static string firstname, lastname, email;
         public Form1()
         {
             InitializeComponent();
@@ -111,6 +113,24 @@ namespace DatabaseCon
                     }
             }
 
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            
+        }
+
+        private void dataGridView1_MouseClick(object sender, MouseEventArgs e)
+        {
+            firstname = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+             lastname= dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+             email= dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
+            string d = dataGridView1.SelectedRows[0].Cells[5].Value.ToString();
+            dateofbirth= d.Split('/');
+            MessageBox.Show(firstname + lastname + email +" ",dateofbirth[0]+'-'+dateofbirth[1]+'-'+dateofbirth[2]);
+                Form2 g = new Form2();
+            g.Show();
         }
     }
 }
