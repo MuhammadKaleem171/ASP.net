@@ -30,20 +30,21 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
+            this.lpassword = new System.Windows.Forms.TextBox();
+            this.lemail = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.pic = new System.Windows.Forms.GroupBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.FirstName = new System.Windows.Forms.TextBox();
+            this.lastName = new System.Windows.Forms.TextBox();
+            this.email = new System.Windows.Forms.TextBox();
+            this.rEmail = new System.Windows.Forms.TextBox();
+            this.Password = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.Male = new System.Windows.Forms.RadioButton();
             this.Female = new System.Windows.Forms.RadioButton();
             this.btnCrtAcc = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,8 +52,8 @@
             // 
             this.groupBox1.BackColor = System.Drawing.Color.SteelBlue;
             this.groupBox1.Controls.Add(this.btnLogin);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.lpassword);
+            this.groupBox1.Controls.Add(this.lemail);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(2, 3);
             this.groupBox1.Name = "groupBox1";
@@ -60,6 +61,30 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sign in";
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.Location = new System.Drawing.Point(906, 28);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(75, 23);
+            this.btnLogin.TabIndex = 3;
+            this.btnLogin.Text = "login";
+            this.btnLogin.UseVisualStyleBackColor = true;
+            // 
+            // lpassword
+            // 
+            this.lpassword.Location = new System.Drawing.Point(687, 29);
+            this.lpassword.Name = "lpassword";
+            this.lpassword.Size = new System.Drawing.Size(176, 20);
+            this.lpassword.TabIndex = 2;
+            // 
+            // lemail
+            // 
+            this.lemail.Location = new System.Drawing.Point(483, 31);
+            this.lemail.Name = "lemail";
+            this.lemail.Size = new System.Drawing.Size(176, 20);
+            this.lemail.TabIndex = 1;
             // 
             // label1
             // 
@@ -73,30 +98,6 @@
             this.label1.Text = "facebook";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(483, 31);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(176, 20);
-            this.textBox1.TabIndex = 1;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(687, 29);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(176, 20);
-            this.textBox2.TabIndex = 2;
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(906, 28);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(75, 23);
-            this.btnLogin.TabIndex = 3;
-            this.btnLogin.Text = "login";
-            this.btnLogin.UseVisualStyleBackColor = true;
-            // 
             // pic
             // 
             this.pic.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic.BackgroundImage")));
@@ -109,40 +110,40 @@
             this.pic.TabStop = false;
             this.pic.Text = "groupBox2";
             // 
-            // textBox3
+            // FirstName
             // 
-            this.textBox3.Location = new System.Drawing.Point(652, 161);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(140, 20);
-            this.textBox3.TabIndex = 2;
+            this.FirstName.Location = new System.Drawing.Point(652, 161);
+            this.FirstName.Name = "FirstName";
+            this.FirstName.Size = new System.Drawing.Size(140, 20);
+            this.FirstName.TabIndex = 2;
             // 
-            // textBox4
+            // lastName
             // 
-            this.textBox4.Location = new System.Drawing.Point(819, 161);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(140, 20);
-            this.textBox4.TabIndex = 3;
+            this.lastName.Location = new System.Drawing.Point(819, 161);
+            this.lastName.Name = "lastName";
+            this.lastName.Size = new System.Drawing.Size(140, 20);
+            this.lastName.TabIndex = 3;
             // 
-            // textBox5
+            // email
             // 
-            this.textBox5.Location = new System.Drawing.Point(652, 205);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(307, 20);
-            this.textBox5.TabIndex = 4;
+            this.email.Location = new System.Drawing.Point(652, 205);
+            this.email.Name = "email";
+            this.email.Size = new System.Drawing.Size(307, 20);
+            this.email.TabIndex = 4;
             // 
-            // textBox6
+            // rEmail
             // 
-            this.textBox6.Location = new System.Drawing.Point(652, 253);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(307, 20);
-            this.textBox6.TabIndex = 5;
+            this.rEmail.Location = new System.Drawing.Point(652, 253);
+            this.rEmail.Name = "rEmail";
+            this.rEmail.Size = new System.Drawing.Size(307, 20);
+            this.rEmail.TabIndex = 5;
             // 
-            // textBox7
+            // Password
             // 
-            this.textBox7.Location = new System.Drawing.Point(652, 309);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(307, 20);
-            this.textBox7.TabIndex = 6;
+            this.Password.Location = new System.Drawing.Point(652, 309);
+            this.Password.Name = "Password";
+            this.Password.Size = new System.Drawing.Size(307, 20);
+            this.Password.TabIndex = 6;
             // 
             // dateTimePicker1
             // 
@@ -186,6 +187,16 @@
             this.btnCrtAcc.TabIndex = 10;
             this.btnCrtAcc.Text = "Create an account";
             this.btnCrtAcc.UseVisualStyleBackColor = false;
+            this.btnCrtAcc.Click += new System.EventHandler(this.btnCrtAcc_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(482, 102);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "label2";
             // 
             // Login
             // 
@@ -194,15 +205,16 @@
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1022, 578);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnCrtAcc);
             this.Controls.Add(this.Female);
             this.Controls.Add(this.Male);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.Password);
+            this.Controls.Add(this.rEmail);
+            this.Controls.Add(this.email);
+            this.Controls.Add(this.lastName);
+            this.Controls.Add(this.FirstName);
             this.Controls.Add(this.pic);
             this.Controls.Add(this.groupBox1);
             this.Name = "Login";
@@ -220,18 +232,19 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox lpassword;
+        private System.Windows.Forms.TextBox lemail;
         private System.Windows.Forms.GroupBox pic;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox FirstName;
+        private System.Windows.Forms.TextBox lastName;
+        private System.Windows.Forms.TextBox email;
+        private System.Windows.Forms.TextBox rEmail;
+        private System.Windows.Forms.TextBox Password;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.RadioButton Male;
         private System.Windows.Forms.RadioButton Female;
         private System.Windows.Forms.Button btnCrtAcc;
+        private System.Windows.Forms.Label label2;
     }
 }
 
