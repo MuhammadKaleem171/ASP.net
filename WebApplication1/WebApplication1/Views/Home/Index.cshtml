@@ -1,0 +1,84 @@
+﻿@model IEnumerable<WebApplication1.Models.Coustomer>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<div>
+    <form method="Get" action="Search_BY_name">
+        <input type="text" name="name" />
+        <input type="submit" value="Filter" />
+    </form>
+</div>
+<div>
+    <form method="post">
+        <select name="option" class="form-control" id="exampleFormControlSelect1" onchange="this.form.submit()">
+            <option selected>Order FirstName BY </option>
+
+                    <option value="ASC"> ASC</option>
+            <option value="DESC"> DEC</option>
+        </select>
+
+    </form>
+</div>
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            record#
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RoomNO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cnic)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Phone)
+        </th>
+        <th></th>
+    </tr>
+
+    @{  int i = 1; }
+    @foreach (var item in Model)
+    {
+      
+        <tr><td>
+            @i 
+            </td>
+            <td>
+                @Html.DisplayFor(a=> item.RoomNO)
+            </td>
+            <td>
+                @Html.DisplayFor(a => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cnic)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { id = item.RoomNO }) |
+                @Html.ActionLink("Delete", "Delete", new {  id=item.RoomNO })
+            </td>
+        </tr>
+        i++;
+    }
+
+</table>

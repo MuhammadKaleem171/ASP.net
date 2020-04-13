@@ -1,0 +1,51 @@
+﻿@model IEnumerable<WebApplication1.Models.Countries>
+@{
+    ViewBag.Title = "weather";
+}
+@{ 
+    string cl = "null";
+}
+
+<h2>weather</h2>
+<table class="table">
+    @{
+    <tr >
+        <th> country</th>
+        <th> NewDeaths</th>
+        <th> TotalDeaths</th>
+        <th> NewRecoverd</th>
+        <th> TotalRecoverd</th>
+        <th> New Confrimed</th>
+        <th>TotalConfrimed</th>
+    </tr>
+
+        foreach (var c in Model)
+        {
+            int a = int.Parse(c.TotalDeaths);
+            if (a > 1000)
+            {
+                cl = "danger";
+            }
+            else
+            {
+                cl = "active";
+            }
+    <tr class="@cl" >
+        <td> @c.Country</td>
+        <td> @c.NewDeaths;</td>
+        <td>@c.TotalDeaths;</td>
+        <td> @c.NewRecovered;</td>
+        <td>  @c.TotalRecovered</td>
+        <td> @c.NewConfirmed;</td>
+        <td> @c.TotalConfirmed;</td>
+    </tr>
+        }
+
+    }
+</table>
+
+
+
+@ViewData["dd"];
+
+
