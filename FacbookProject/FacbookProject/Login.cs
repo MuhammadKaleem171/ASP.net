@@ -11,8 +11,10 @@ using System.Windows.Forms;
 
 namespace FacbookProject
 {
+   
     public partial class Login : Form
     {
+        public static string emailAddress { get; set; }
         public Login()
         {
 
@@ -48,8 +50,13 @@ namespace FacbookProject
              }
             else
             {
+                emailAddress = email.Text;
                 checkPassword = true;
                 label2.Text = checkPassword.ToString();
+
+               Verification  v= new Verification();
+                v.Show();
+                this.Hide();
             }
             
             
