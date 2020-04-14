@@ -48,6 +48,8 @@ namespace FacbookProject
                 @"(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))$",
                 RegexOptions.IgnoreCase);
              Chk_email = REmail.IsMatch(email.Text);
+            Regex Rpassword = new Regex("^[A-Z]{1,10}[a-z]{1,10}[0-9]{1,10}$");
+            chk_password = Rpassword.IsMatch(Password.Text);
             if (Chk_email == false)
             {
                 MessageBox.Show("incorrect email ");
@@ -56,43 +58,46 @@ namespace FacbookProject
             {
                 chk_remail = true;
             }
-            
-            
-
-            Regex Rpassword = new Regex("^[A-Z]{1,10}[a-z]{1,10}[0-9]{1,10}$");
-            bool checkPassword= Rpassword.IsMatch(Password.Text);
-            else if (Password.Text.Length < 8)
+             if (Password.Text.Length < 8)
             {
                 MessageBox.Show("minimum 8 character required");
             }
-            else if (checkPassword == false)
+            else if (chk_password == false)
             {
                 MessageBox.Show("1st word Capital, 1 small and numerical value required" );
              }
             else
             {
                 chk_password = true;
-                if (Male.Checked)
+                if (Chk_email == true && chk_remail == true && chk_password == true)
                 {
-                    Gender = "male";
+                    if (Male.Checked)
+                    {
+                        Gender = "male";
+                    }
+                    else if (Female.Checked)
+                    {
+                        Gender = "female";
+                    }
+
+                    emailAddress = email.Text;
+                    UserPassword = email.Text;
+                    string[] acId = emailAddress.Split('@');
+                    AccountID = acId[0];
+                    U_FirstName = FirstName.Text;
+                    U_LastName = lastName.Text;
+                    DOB = dateTimePicker1.Value.ToShortDateString();
+
+                    MessageBox.Show("form successfully submit");
+
+                    Verification  v= new Verification();
+                    v.Show();
+                    this.Hide();
                 }
-                else if (Female.Checked)
+                else
                 {
-                    Gender = "female";
+                    MessageBox.Show("plz fill the form correctly ");
                 }
-
-                emailAddress = email.Text;
-                UserPassword = email.Text;
-                string[] acId = emailAddress.Split('@');
-                AccountID = acId[0];
-                U_FirstName = FirstName.Text;
-                U_LastName = lastName.Text;
-                DOB = dateTimePicker1.Value.ToShortDateString();
-
-
-                //Verification  v= new Verification();
-                //v.Show();
-                //this.Hide();
             }
             
             

@@ -24,7 +24,13 @@ namespace FacbookProject
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            if (verificationCode.Equals(Vcode.Text))
+            {
+                MessageBox.Show("thank u for confirm");
+            }
+            else {
+                MessageBox.Show("incorrect code");
+            }
         }
 
         void SendEmail()
