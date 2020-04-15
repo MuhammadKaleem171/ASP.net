@@ -152,6 +152,20 @@ namespace DatabaseCon
             
         }
 
+        private void circularButton1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                Bitmap bit = new Bitmap(ofd.FileName);
+                circularPicture2.Image = bit;
+                circularPicture2.SizeMode = PictureBoxSizeMode.StretchImage;
+                // pictureBox1.Size = new System.Drawing.Size(360, 360);
+                //Show message in PopUp
+                MessageBox.Show(ofd.FileName.ToString());
+            }
+        }
+
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 

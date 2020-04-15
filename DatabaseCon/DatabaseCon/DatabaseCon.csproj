@@ -52,6 +52,12 @@
     <Compile Include="Assignment6.Designer.cs">
       <DependentUpon>Assignment6.cs</DependentUpon>
     </Compile>
+    <Compile Include="CircularButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CircularPicture.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

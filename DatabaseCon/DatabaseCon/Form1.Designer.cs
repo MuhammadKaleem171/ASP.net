@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,8 +61,13 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
+            this.circularPicture2 = new DatabaseCon.CircularPicture();
+            this.circularPicture1 = new DatabaseCon.CircularPicture();
+            this.circularButton1 = new DatabaseCon.CircularButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.circularPicture2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.circularPicture1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -320,11 +326,43 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // circularPicture2
+            // 
+            this.circularPicture2.Image = ((System.Drawing.Image)(resources.GetObject("circularPicture2.Image")));
+            this.circularPicture2.Location = new System.Drawing.Point(808, 29);
+            this.circularPicture2.Name = "circularPicture2";
+            this.circularPicture2.Size = new System.Drawing.Size(100, 71);
+            this.circularPicture2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.circularPicture2.TabIndex = 23;
+            this.circularPicture2.TabStop = false;
+            // 
+            // circularPicture1
+            // 
+            this.circularPicture1.Location = new System.Drawing.Point(0, 0);
+            this.circularPicture1.Name = "circularPicture1";
+            this.circularPicture1.Size = new System.Drawing.Size(100, 50);
+            this.circularPicture1.TabIndex = 22;
+            this.circularPicture1.TabStop = false;
+            // 
+            // circularButton1
+            // 
+            this.circularButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.circularButton1.Image = ((System.Drawing.Image)(resources.GetObject("circularButton1.Image")));
+            this.circularButton1.Location = new System.Drawing.Point(821, 168);
+            this.circularButton1.Name = "circularButton1";
+            this.circularButton1.Size = new System.Drawing.Size(44, 48);
+            this.circularButton1.TabIndex = 24;
+            this.circularButton1.UseVisualStyleBackColor = true;
+            this.circularButton1.Click += new System.EventHandler(this.circularButton1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1110, 609);
+            this.Controls.Add(this.circularButton1);
+            this.Controls.Add(this.circularPicture2);
+            this.Controls.Add(this.circularPicture1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.textBox5);
@@ -352,6 +390,8 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.circularPicture2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.circularPicture1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -391,6 +431,9 @@
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button3;
+        private CircularPicture circularPicture1;
+        private CircularPicture circularPicture2;
+        private CircularButton circularButton1;
     }
 }
 
