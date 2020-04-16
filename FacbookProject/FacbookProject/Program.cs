@@ -16,7 +16,7 @@ namespace FacbookProject
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ProfilePicture());
+            Application.Run(new TimelineForm());
         }
     }
 }

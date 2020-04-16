@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -24,17 +25,28 @@ namespace FacbookProject
         bool Chk_email, chk_remail, chk_password;
         public Login()
         {
+            Thread t = new Thread(new ThreadStart(StartForm));
+            t.Start();
+            Thread.Sleep(9000);
 
             InitializeComponent();
             Password.PasswordChar = '*';
             Chk_email = false;
             chk_remail = false;
             chk_password = false;
+            t.Abort();
+        }
+
+        public void StartForm() {
+            Application.Run(new WelcomeForm());
         }
 
         private void Login_Load(object sender, EventArgs e)
         {
-
+            circularProgressBar1.Hide();
+            circularProgressBar1.Maximum = 0;
+            circularProgressBar1.Value = 0;
+            circularProgressBar1.Maximum = 100;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -88,7 +100,16 @@ namespace FacbookProject
                     U_LastName = lastName.Text;
                     DOB = dateTimePicker1.Value.ToShortDateString();
 
-                    MessageBox.Show("form successfully submit");
+
+                   circularProgressBar1.Show();
+            for (int i = 0; i <=100; i++)
+            {
+
+                Thread.Sleep(5);
+                circularProgressBar1.Value = i;
+                circularProgressBar1.Text = i.ToString()+"%";
+                circularProgressBar1.Update();
+            }
 
                     Verification  v= new Verification();
                     v.Show();

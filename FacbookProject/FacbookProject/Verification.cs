@@ -15,6 +15,7 @@ namespace FacbookProject
 {
     public partial class Verification : Form
     {
+        public static int flag = 0;
         public string verificationCode;
 
         public Verification()
@@ -51,11 +52,12 @@ namespace FacbookProject
                 client.Credentials = new NetworkCredential("facebookproject66@gmail.com", "kFPqtT9qBD9uZzF");
                 MailMessage msg = new MailMessage();
                 mail.To.Add(Login.emailAddress);
-                mail.From = new MailAddress("malikkaleem171@gmail.com");
+                mail.From = new MailAddress("facebookproject66@gmail.com");
                 mail.Subject = "Verification code";
                 mail.Body = "your verification code is: "+verificationCode;
                 client.Send(mail);
                 MessageBox.Show(" Email sucessfully send");
+                flag = 1;
 
             }
             catch (Exception ex)
@@ -93,6 +95,11 @@ namespace FacbookProject
         }
 
         private void Verification_Load(object sender, EventArgs e)
+        {
+            SendEmail();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
         {
             SendEmail();
         }
